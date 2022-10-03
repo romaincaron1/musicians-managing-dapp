@@ -8,7 +8,6 @@ describe("MusiciansManager", function () {
 		const musiciansManager = await MusiciansManager.deploy();
 		const contract = await musiciansManager.deployed();
 
-		const [_, addr1] = await ethers.getSigners();
 
 		const response = await contract.addMusician(addr1.address, "John");
 		const addMusicianResponse = await response.wait();
